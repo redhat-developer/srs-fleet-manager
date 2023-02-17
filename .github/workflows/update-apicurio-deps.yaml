@@ -11,7 +11,7 @@ jobs:
     steps:
 
       - name: Install JDK 11
-        uses: AdoptOpenJDK/install-jdk@v1
+        uses: AdoptOpenJDK/install-jdk@2f15d3f82051aa50984186fc1184467d0d9f87d0 #v1
         with:
           version: 11
           architecture: x64
@@ -38,7 +38,7 @@ jobs:
           make pr-check
 
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@18f7dc018cc2cd597073088f7c7591b9d1c02672 #v3
         with:
           commit-message: Update Apicurio dependencies
           title: Update Apicurio dependencies
@@ -53,7 +53,7 @@ jobs:
 
       - name: Notify of version update failure
         if: ${{ failure() }}
-        uses: Co-qn/google-chat-notification@releases/v1
+        uses: Co-qn/google-chat-notification@b9227d9daa4638c9782a5bd16c4abb86268127a1 #releases/v1
         with:
           name: ${{ github.workflow }}
           url: ${{ secrets.GOOGLE_CHAT_WEBHOOK }}

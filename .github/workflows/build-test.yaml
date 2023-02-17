@@ -16,7 +16,7 @@ jobs:
     steps:
 
       - name: Install JDK 11
-        uses: AdoptOpenJDK/install-jdk@v1
+        uses: AdoptOpenJDK/install-jdk@2f15d3f82051aa50984186fc1184467d0d9f87d0 #v1
         with:
           version: 11
           architecture: x64
